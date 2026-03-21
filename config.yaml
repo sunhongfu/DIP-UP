@@ -1,0 +1,17 @@
+# DIP-UP configuration
+# Run: python run.py --config config.yaml
+
+# --- Required ---
+phase: ph.nii.gz          # wrapped phase NIfTI (3D, values in radians)
+
+# --- Optional inputs ---
+mask: null                # brain mask NIfTI (null = non-zero voxels)
+checkpoint: null          # PhaseNet3D .pth checkpoint (null = random init)
+
+# --- Optimisation ---
+n_iter: 2000              # number of iterations
+lr: 0.000001              # RMSprop learning rate
+shift_base: 5             # winding number shift base
+
+# --- Output ---
+output: ./dipup_output
